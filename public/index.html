@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>图书投票</title>
+    <link rel="stylesheet" href="/styles.css">
+  </head>
+  <body>
+    <main class="page">
+      <header class="hero">
+        <p class="eyebrow">Book Vote MVP</p>
+        <h1>图书投票</h1>
+        <p class="hero-description">从候选书单中选择你最想推荐的一本书，点击按钮即可完成投票。</p>
+      </header>
+
+      <section class="auth-panel" aria-labelledby="authTitle">
+        <div class="auth-summary">
+          <div>
+            <h2 id="authTitle">用户状态</h2>
+            <p id="authSummaryText">正在检查登录状态...</p>
+          </div>
+          <div id="authActions" class="auth-actions">
+            <button id="showLoginButton" class="secondary-button" type="button">登录</button>
+            <button id="showRegisterButton" class="secondary-button" type="button">注册</button>
+            <button id="showChangePasswordButton" class="secondary-button" type="button" hidden>修改密码</button>
+            <button id="showAdminButton" class="secondary-button" type="button" hidden>后台管理</button>
+            <button id="logoutButton" class="secondary-button" type="button" hidden>退出登录</button>
+          </div>
+        </div>
+
+        <div class="auth-forms">
+          <form id="loginForm" class="auth-form" hidden>
+            <h3>登录</h3>
+            <label>
+              用户名
+              <input id="loginUsername" name="username" type="text" autocomplete="username" required>
+            </label>
+            <label>
+              密码
+              <span class="password-field">
+                <input id="loginPassword" name="password" type="password" autocomplete="current-password" required>
+                <button class="password-toggle" type="button" data-toggle-password="loginPassword" aria-controls="loginPassword" aria-pressed="false">显示</button>
+              </span>
+            </label>
+            <div class="form-actions">
+              <button class="vote-button" type="submit">登录</button>
+              <button class="secondary-button" type="button" data-auth-cancel>取消</button>
+            </div>
+          </form>
+
+          <form id="registerForm" class="auth-form" hidden>
+            <h3>注册</h3>
+            <label>
+              用户名
+              <input id="registerUsername" name="username" type="text" autocomplete="username" required>
+            </label>
+            <label>
+              密码
+              <span class="password-field">
+                <input id="registerPassword" name="password" type="password" autocomplete="new-password" required>
+                <button class="password-toggle" type="button" data-toggle-password="registerPassword" aria-controls="registerPassword" aria-pressed="false">显示</button>
+              </span>
+            </label>
+            <label>
+              确认密码
+              <span class="password-field">
+                <input id="registerConfirmPassword" name="confirmPassword" type="password" autocomplete="new-password" required>
+                <button class="password-toggle" type="button" data-toggle-password="registerConfirmPassword" aria-controls="registerConfirmPassword" aria-pressed="false">显示</button>
+              </span>
+            </label>
+            <div class="form-actions">
+              <button class="vote-button" type="submit">注册</button>
+              <button class="secondary-button" type="button" data-auth-cancel>取消</button>
+            </div>
+          </form>
+
+          <form id="changePasswordForm" class="auth-form" hidden>
+            <h3>修改密码</h3>
+            <label>
+              当前密码
+              <span class="password-field">
+                <input id="currentPassword" name="currentPassword" type="password" autocomplete="current-password" required>
+                <button class="password-toggle" type="button" data-toggle-password="currentPassword" aria-controls="currentPassword" aria-pressed="false">显示</button>
+              </span>
+            </label>
+            <label>
+              新密码
+              <span class="password-field">
+                <input id="newPassword" name="newPassword" type="password" autocomplete="new-password" required>
+                <button class="password-toggle" type="button" data-toggle-password="newPassword" aria-controls="newPassword" aria-pressed="false">显示</button>
+              </span>
+            </label>
+            <label>
+              确认新密码
+              <span class="password-field">
+                <input id="confirmNewPassword" name="confirmNewPassword" type="password" autocomplete="new-password" required>
+                <button class="password-toggle" type="button" data-toggle-password="confirmNewPassword" aria-controls="confirmNewPassword" aria-pressed="false">显示</button>
+              </span>
+            </label>
+            <div class="form-actions">
+              <button class="vote-button" type="submit">保存新密码</button>
+              <button class="secondary-button" type="button" data-auth-cancel>取消</button>
+            </div>
+          </form>
+        </div>
+      </section>
+
+      <section class="status-panel" aria-live="polite">
+        <div id="statusMessage" class="status-message">正在加载图书列表...</div>
+      </section>
+
+      <section id="adminPanel" class="admin-panel" aria-labelledby="adminTitle" hidden>
+        <div class="section-heading">
+          <div>
+            <h2 id="adminTitle">后台图书管理</h2>
+            <p class="admin-description">管理员可以修改书名、增加或删除候选图书。</p>
+          </div>
+          <div class="admin-row-actions">
+            <button id="startVoteRoundButton" class="secondary-button" type="button">发起新一轮投票</button>
+            <button id="adminRefreshButton" class="secondary-button" type="button">刷新后台数据</button>
+          </div>
+        </div>
+
+        <form id="adminCreateBookForm" class="admin-create-form">
+          <label>
+            新图书书名
+            <input id="adminNewBookTitle" name="title" type="text" maxlength="80" required>
+          </label>
+          <button class="vote-button" type="submit">新增图书</button>
+        </form>
+
+        <div id="adminBookList" class="admin-book-list"></div>
+      </section>
+
+      <section aria-labelledby="bookListTitle">
+        <div class="section-heading">
+          <h2 id="bookListTitle">候选图书</h2>
+          <button id="refreshButton" class="secondary-button" type="button">刷新票数</button>
+        </div>
+        <div id="bookList" class="book-grid"></div>
+      </section>
+    </main>
+
+    <script src="/app.js"></script>
+  </body>
+</html>

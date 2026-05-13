@@ -1,0 +1,19 @@
+{
+  "name": "vote-book",
+  "version": "1.0.0",
+  "description": "网页版本的图书投票应用 MVP",
+  "main": "server.js",
+  "type": "commonjs",
+  "scripts": {
+    "start": "node server.js",
+    "check": "node --check server.js && node --check public/app.js && node --check scripts/create-admin.js",
+    "create-admin": "node scripts/create-admin.js"
+  },
+  "keywords": [
+    "books",
+    "vote",
+    "nodejs"
+  ],
+  "author": "",
+  "license": "UNLICENSED"
+}

@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="420" viewBox="0 0 640 420" role="img" aria-labelledby="title desc">
+  <title id="title">代码整洁之道</title>
+  <desc id="desc">图书封面占位图</desc>
+  <rect width="640" height="420" fill="#2a9d8f"/>
+  <rect x="54" y="54" width="532" height="312" rx="28" fill="#f8f9fa" opacity="0.96"/>
+  <text x="320" y="180" text-anchor="middle" font-family="Arial, sans-serif" font-size="46" font-weight="700" fill="#16524c">Clean Code</text>
+  <text x="320" y="240" text-anchor="middle" font-family="Arial, sans-serif" font-size="30" fill="#2a9d8f">代码整洁之道</text>
+</svg>

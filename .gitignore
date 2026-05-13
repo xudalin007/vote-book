@@ -1,0 +1,25 @@
+# Dependencies
+node_modules/
+
+# Runtime / sensitive data
+user.json
+vote.json
+
+# Environment
+.env
+.env.*
+
+# Logs
+*.log
+npm-debug.log*
+
+# macOS
+.DS_Store
+
+# Editor
+.vscode/
+.idea/
+*.swp
+
+# Claude Code local settings
+.claude/settings.local.json

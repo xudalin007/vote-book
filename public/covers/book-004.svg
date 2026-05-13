@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="420" viewBox="0 0 640 420" role="img" aria-labelledby="title desc">
+  <title id="title">重构</title>
+  <desc id="desc">图书封面占位图</desc>
+  <rect width="640" height="420" fill="#6d597a"/>
+  <rect x="54" y="54" width="532" height="312" rx="28" fill="#ffe8d6" opacity="0.96"/>
+  <text x="320" y="180" text-anchor="middle" font-family="Arial, sans-serif" font-size="50" font-weight="700" fill="#3f2d49">Refactor</text>
+  <text x="320" y="240" text-anchor="middle" font-family="Arial, sans-serif" font-size="34" fill="#6d597a">重构</text>
+</svg>

@@ -1,0 +1,44 @@
+[
+  {
+    "id": "book-002",
+    "title": "JavaScript 高级程序设计",
+    "author": "Nicholas C. Zakas",
+    "description": "系统讲解 JavaScript 语言特性和浏览器端开发基础。",
+    "coverUrl": "/covers/book-002.svg"
+  },
+  {
+    "id": "book-003",
+    "title": "代码整洁之道",
+    "author": "Robert C. Martin",
+    "description": "围绕命名、函数、类和测试讲解可维护代码实践。",
+    "coverUrl": "/covers/book-003.svg"
+  },
+  {
+    "id": "book-004",
+    "title": "重构",
+    "author": "Martin Fowler",
+    "description": "介绍识别代码坏味道并通过小步改造改善设计的方法。",
+    "coverUrl": "/covers/book-004.svg"
+  },
+  {
+    "id": "book-005",
+    "title": "设计模式",
+    "author": "Erich Gamma 等",
+    "description": "总结常见面向对象设计模式及其适用场景。",
+    "coverUrl": "/covers/book-005.svg"
+  },
+  {
+    "id": "book-006",
+    "title": "程序员修炼之道",
+    "author": "Andrew Hunt / David Thomas",
+    "description": "从工程习惯、工具使用和职业实践角度提升开发质量。",
+    "coverUrl": "/covers/book-006.svg"
+  },
+  {
+    "id": "book-007",
+    "title": "你是孩子的前传",
+    "author": "待补充",
+    "description": "待补充",
+    "coverUrl": "/covers/default.svg"
+  }
+]

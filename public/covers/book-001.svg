@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="420" viewBox="0 0 640 420" role="img" aria-labelledby="title desc">
+  <title id="title">深入浅出 Node.js</title>
+  <desc id="desc">图书封面占位图</desc>
+  <rect width="640" height="420" fill="#7f5539"/>
+  <rect x="54" y="54" width="532" height="312" rx="28" fill="#fdf0d5" opacity="0.96"/>
+  <text x="320" y="180" text-anchor="middle" font-family="Arial, sans-serif" font-size="46" font-weight="700" fill="#3c2415">Node.js</text>
+  <text x="320" y="240" text-anchor="middle" font-family="Arial, sans-serif" font-size="30" fill="#7f5539">深入浅出</text>
+</svg>
